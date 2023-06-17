@@ -19,3 +19,4 @@ class TaskListView(ListView):
 class TaskDetailView(DetailView):
     model = Task
     context_object_name = 'task'
+    template_name = 'todo/task.html'
