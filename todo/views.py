@@ -9,9 +9,13 @@
 from django.views.generic import ListView
 from django.views.generic import DetailView
 from .models import Task
+
+
 class TaskListView(ListView):
     model = Task
-    context_object_name = 'tasks'
+    context_object_name = 'task'
+
 
 class TaskDetailView(DetailView):
     model = Task
+    context_object_name = 'task'
