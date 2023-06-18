@@ -8,7 +8,7 @@
 # class base views
 from django.views.generic import ListView
 from django.views.generic import DetailView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 
 from django.urls import reverse_lazy
 from .models import Task
@@ -28,4 +28,10 @@ class TaskDetailView(DetailView):
 class TaskCreate(CreateView):
     model = Task
     fields = '__all__'  # all the fields in models.Task
+    success_url = reverse_lazy('task')
+
+
+class TaskUpdate(UpdateView):
+    model = Task
+    fields = '__all__'
     success_url = reverse_lazy('task')
