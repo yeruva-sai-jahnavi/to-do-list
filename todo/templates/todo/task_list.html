@@ -12,6 +12,7 @@
         <td><a href="{% url 'task-detail' t.id %}"> View </a></td>
         <td><a href="{% url 'task-create' %}"> Add </a></td>
         <td><a href="{% url 'task-update' t.id %}"> Update </a></td>
+        <td><a href="{% url 'task-delete' t.id %}"> Delete </a></td>
     </tr>
 
     {% empty %}
